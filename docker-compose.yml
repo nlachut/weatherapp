@@ -4,6 +4,8 @@ services:
     build: ./backend
     ports:
       - "9000:9000"
+    environment:
+      APPID: 658d9d99e91f7f79e9dacaab32d00f4a
   frontend:
     build: ./frontend
     ports:
