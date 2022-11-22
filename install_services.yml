@@ -1,0 +1,25 @@
+---
+- name: Install app
+  hosts: localhost
+  vars:
+    repo: git@github.com:nlachut/weatherapp.git
+    dest: "/app"
+    sshkey: "/root/.ssh/ssh-ed25519"
+  tasks:
+    - name: Ensure git package is installed
+      yum:
+        name: git
+        state: present
+        update_cache: true
+      become: true
+
+    - name: Checkout git repository
+      ansible.builtin.git:
+        repo: "{{ repo }}"
+        dest: "{{ dest }}"
+        key_file: "{{ sshkey }}"
+        force: true
+
+    - name: Create and start services
+      community.docker.docker_compose:
+        project_src: /app
