@@ -11,4 +11,4 @@ services:
     ports:
       - "8000:8000"
     environment:
-      ENDPOINT: http://localhost:9000/api
+      ENDPOINT: http://ec2-44-203-121-60.compute-1.amazonaws.com:9000/api
