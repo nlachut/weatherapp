@@ -9,8 +9,11 @@ Command to start the applications from both folders:
 npm start
 
 If application should be executable in Windows, make sure to modify package.json 12th line in fronted application:
-from   "start": "node_modules/.bin/webpack-dev-server --config webpack.config.js --progress --inline --colors",
-to     "start": node node_modules/bin/webpack-dev-server.js --config webpack.config.js --progress --inline --colors",
+
+from   
+"start": "node_modules/.bin/webpack-dev-server --config webpack.config.js --progress --inline --colors",
+to    
+"start": node node_modules/bin/webpack-dev-server.js --config webpack.config.js --progress --inline --colors",
 
 Both applications are contenerized.
 Backend application can be build and run with following commands in backend folder based on the created Dockerfile:
