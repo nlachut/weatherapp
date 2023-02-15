@@ -3,7 +3,7 @@
 To complete the prerequisites, a personal API key has been created:
 658d9d99e91f7f79e9dacaab32d00f4a
 
-Both applications can be run and started locally from frontend and backend folders. Make sure to instal node and npm beforehand.
+Both applications can be run and started locally from frontend and backend folders. Make sure to install node and npm beforehand.
 
 Command to start the applications from both folders:
 npm start
